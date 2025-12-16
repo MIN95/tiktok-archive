@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://<github-username>.github.io/<repo>/",
+  "homepage": "https://MIN95.github.io/tiktok-archive/",
   "type": "module",
   "scripts": {
     "start": "vite",
