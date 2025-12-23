@@ -13,8 +13,9 @@
         margin-top: 30px;
         font-size: 13px;
         color: #666;
-        width: 100%;
+        width: 100%; /* 전체 너비 차지 */
         border-top: 1px solid #eee;
+        clear: both; /* 혹시 모를 플롯 해제 */
       }
       .legal-footer a {
         color: #555;
@@ -32,7 +33,7 @@
   <body>
     <div id="root"></div>
     
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx"></script> 
     <footer class="legal-footer">
       <a href="/tiktok-archive/terms.html">이용약관 (Terms of Service)</a> | 
       <a href="/tiktok-archive/privacy.html">개인정보 처리방침 (Privacy Policy)</a>
