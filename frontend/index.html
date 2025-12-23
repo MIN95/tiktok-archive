@@ -1,61 +1,42 @@
 <!doctype html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/tiktok-archive/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>frontend</title>
-    <script type="module" crossorigin="" src="/tiktok-archive/assets/index-Bh4iL2Rd.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/tiktok-archive/assets/index-CoiMYqx-.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok API Integration</title>
     
     <style>
       .legal-footer {
         text-align: center;
-        padding: 20px 0;
+        padding: 40px 0;
         margin-top: 30px;
         font-size: 13px;
         color: #666;
         width: 100%;
-        background-color: transparent; /* 배경 투명 */
-        border-top: 1px solid #eee; /* 상단 옅은 구분선 */
+        border-top: 1px solid #eee;
       }
       .legal-footer a {
         color: #555;
         text-decoration: none;
         margin: 0 10px;
         font-family: sans-serif;
+        font-weight: bold;
       }
       .legal-footer a:hover {
         text-decoration: underline;
-        color: #000;
+        color: #fe2c55;
       }
     </style>
   </head>
   <body>
-    <div id="root">
-      <div class="app-container">
-        <div class="home-container">
-          <h1>TikTok API Integration</h1>
-          <div class="input-group">
-            <label>TikTok App Key (Client Key)</label>
-            <input type="text" placeholder="Enter App Key" value="">
-          </div>
-          <div class="input-group">
-            <label>TikTok Secret Key</label>
-            <input type="password" placeholder="Enter Secret Key" value="">
-          </div>
-          <div class="input-group">
-            <label>Redirect URI</label>
-            <input type="text" placeholder="https://&lt;username&gt;.github.io/&lt;repo&gt;/callback" value="">
-          </div>
-          <button>Login with TikTok</button>
-        </div>
-      </div>
-    <footer class="legal-footer">
-      <a href="./terms.html">이용약관 (Terms of Service)</a> | 
-      <a href="./privacy.html">개인정보 처리방침 (Privacy Policy)</a>
-    </footer></div>
-
+    <div id="root"></div>
     
+    <script type="module" src="/src/main.jsx"></script>
+    <footer class="legal-footer">
+      <a href="/tiktok-archive/terms.html">이용약관 (Terms of Service)</a> | 
+      <a href="/tiktok-archive/privacy.html">개인정보 처리방침 (Privacy Policy)</a>
+    </footer>
 
-  
-</body></html>
+  </body>
+</html>
