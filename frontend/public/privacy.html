@@ -1,47 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>개인정보 처리방침</title>
     <style>
-        body {
-            font-family: sans-serif;
-            padding: 20px;
-            text-align: center;
+        body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; color: #333; }
+        h1 { border-bottom: 2px solid #000; padding-bottom: 10px; }
+        h2 { margin-top: 30px; color: #fe2c55; }
+        ul { background-color: #f9f9f9; padding: 20px; border-radius: 12px; } /* 박스 둥글게 수정 */
+        li { margin-bottom: 10px; }
+        
+        /* 푸터 및 홈 버튼 스타일 */
+        .footer { margin-top: 60px; text-align: center; border-top: 1px solid #eee; padding-top: 40px; }
+        .last-update { font-size: 0.85em; color: #888; margin-bottom: 20px; }
+        
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f0f0f0;
+            padding: 12px 24px;
+            border-radius: 50px; /* 둥근 캡슐 모양 */
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            font-size: 0.95em;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
+        .home-btn:hover {
+            background-color: #fe2c55; /* 틱톡 컬러 */
+            color: white;
+            transform: translateY(-3px); /* 둥실 떠오르는 효과 */
+            box-shadow: 0 8px 15px rgba(254, 44, 85, 0.3);
         }
+        .home-btn svg { width: 18px; height: 18px; fill: currentColor; }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: December 16, 2025</p>
-        <p>This privacy policy ("Policy") will help you understand how we use and protect the data you provide to us
-            when you visit and use our service.</p>
-        <h2>Data Collection</h2>
-        <p>We may collect information such as:</p>
-        <ul>
-            <li>Your public TikTok profile information (username, avatar).</li>
-            <li>Your video list as authorized by you.</li>
-        </ul>
-        <h2>Data Usage</h2>
-        <p>The data we collect is used solely to display your profile and videos within this application. We do not
-            store, sell, or share your personal data with third parties.</p>
-        <h2>Security</h2>
-        <p>We are committed to securing your data and keeping it confidential. We have done all in our power to prevent
-            data theft, unauthorized access, and disclosure by implementing the latest technologies and software, which
-            help us safeguard all the information we collect online.</p>
-        <h2>Cookie Policy</h2>
-        <p>We use standard local storage to maintain your session state locally on your device.</p>
-    </div>
-</body>
 
+    <h1>개인정보 처리방침 (Privacy Policy)</h1>
+    <p>본 개인정보 처리방침은 <strong>[앱 이름/서비스명 입력]</strong>(이하 "서비스")가 사용자의 개인정보를 어떻게 수집, 사용 및 보호하는지 설명합니다. 본 서비스는 TikTok for Developers 플랫폼의 API 서비스를 이용하며, TikTok의 정책을 준수합니다.</p>
+
+    <h2>1. 수집하는 개인정보의 항목</h2>
+    <p>서비스는 TikTok 계정을 통한 로그인 및 서비스 제공을 위해 다음과 같은 정보를 TikTok API로부터 제공받아 처리합니다:</p>
+    <ul>
+        <li><strong>기본 프로필 정보 (user.info.basic, user.info.profile):</strong> 사용자 고유 ID(Open ID), 닉네임, 프로필 사진.</li>
+        <li><strong>계정 통계 정보 (user.info.stats):</strong> 팔로워 수, 팔로잉 수, 좋아요 수, 동영상 개수 등의 공개된 통계 데이터.</li>
+        <li><strong>동영상 데이터 (video.list):</strong> 사용자가 업로드한 동영상 목록, 동영상 커버 이미지, 재생 수 및 관련 메타데이터.</li>
+    </ul>
+
+    <h2>2. 개인정보의 수집 및 이용 목적</h2>
+    <p>수집된 정보는 오직 다음의 목적을 위해서만 사용됩니다:</p>
+    <ul>
+        <li><strong>서비스 로그인 및 식별:</strong> TikTok 계정을 연동하여 사용자를 식별하고 로그인 상태를 유지하기 위함.</li>
+        <li><strong>기능 제공:</strong> 사용자의 TikTok 활동 통계를 시각화하여 보여주거나, 동영상 목록을 아카이빙 및 관리하는 기능을 제공하기 위함.</li>
+        <li><strong>공유 기능 (Share Kit):</strong> 사용자가 서비스 내의 콘텐츠를 TikTok으로 다시 공유할 수 있도록 지원하기 위함.</li>
+        <li><strong>실시간 업데이트 (Webhooks):</strong> 사용자 데이터 변경 사항을 실시간으로 감지하여 최신 상태를 유지하기 위함.</li>
+    </ul>
+
+    <h2>3. 개인정보의 제3자 제공 및 공유</h2>
+    <p>서비스는 사용자의 동의 없이 개인정보를 외부에 공개하거나 제3자에게 판매하지 않습니다. 단, 법령에 의한 요구가 있거나, 서비스 제공을 위해 필수적인 기술적 처리가 필요한 경우(예: 클라우드 서버 저장)는 예외로 합니다.</p>
+
+    <h2>4. 데이터의 보유 및 파기</h2>
+    <p>사용자의 개인정보는 서비스 이용 기간 동안 보유하며, 사용자가 서비스 탈퇴를 요청하거나 TikTok 설정에서 앱 연결을 해제할 경우 해당 데이터는 지체 없이 파기됩니다.</p>
+
+    <h2>5. 사용자의 권리 (데이터 삭제 요청)</h2>
+    <p>사용자는 언제든지 TikTok 앱의 [설정 > 보안 및 로그인 > 앱 권한] 메뉴에서 본 서비스의 접근 권한을 철회할 수 있습니다. 권한 철회 시 서비스는 더 이상 사용자의 데이터에 접근하지 않으며, 저장된 데이터 삭제를 원하실 경우 아래 연락처로 문의 주시면 즉시 조치하겠습니다.</p>
+
+    <h2>6. 문의처</h2>
+    <p>개인정보 보호와 관련하여 문의사항이 있으신 경우 아래로 연락 주시기 바랍니다.</p>
+    <p><strong>이메일:</strong> [이메일 주소를 입력하세요]</p>
+
+    <div class="footer">
+        <p class="last-update">최종 수정일: 2025년 12월 23일</p>
+        <a href="index.html" class="home-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z"/>
+                <path d="M7 10.19V18h2v-6h6v6h2v-7.81l-5-4.5z" opacity=".3"/> </svg>
+            홈으로 돌아가기
+        </a>
+    </div>
+
+</body>
 </html>
