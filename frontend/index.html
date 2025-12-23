@@ -7,37 +7,57 @@
     <title>TikTok API Integration</title>
     
     <style>
-      .legal-footer {
-        text-align: center;
-        padding: 40px 0;
-        margin-top: 30px;
-        font-size: 13px;
-        color: #666;
-        width: 100%; /* 전체 너비 차지 */
-        border-top: 1px solid #eee;
-        clear: both; /* 혹시 모를 플롯 해제 */
+      /* 1. Body의 기본 정렬 방향을 '세로'로 강제 변경 */
+      body {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh;
+        margin: 0;
+        width: 100% !important;
       }
+
+      /* 2. 리액트 앱(#root)이 화면 가운데 오도록 설정 */
+      #root {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1; /* 남은 공간을 차지해서 푸터를 아래로 밀어냄 */
+        padding-top: 50px; /* 상단 여백 조금 추가 */
+      }
+
+      /* 3. 푸터 스타일 */
+      .legal-footer {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        background-color: transparent;
+        border-top: 1px solid #eee;
+        margin-top: auto; /* 위쪽 공간을 다 채워서 바닥에 붙음 */
+      }
+
       .legal-footer a {
-        color: #555;
+        color: #666;
         text-decoration: none;
         margin: 0 10px;
+        font-size: 13px;
         font-family: sans-serif;
         font-weight: bold;
       }
+      
       .legal-footer a:hover {
-        text-decoration: underline;
         color: #fe2c55;
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
     
-    <script type="module" src="/src/main.jsx"></script> 
+    <script type="module" src="/src/main.jsx"></script>
+
     <footer class="legal-footer">
       <a href="/tiktok-archive/terms.html">이용약관 (Terms of Service)</a> | 
       <a href="/tiktok-archive/privacy.html">개인정보 처리방침 (Privacy Policy)</a>
     </footer>
-
   </body>
 </html>
